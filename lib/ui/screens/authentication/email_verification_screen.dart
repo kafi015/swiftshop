@@ -1,10 +1,13 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:swiftshop/ui/utils/text_style.dart';
 
 import '../../utils/app_colors.dart';
 import '../../widgets/text_form_field.dart';
 import '../../widgets/title_text.dart';
+import 'complete_profile.dart';
+import 'otp_verification_screen.dart';
 
 class EmailVerificationScreen extends StatefulWidget {
   const EmailVerificationScreen({Key? key}) : super(key: key);
@@ -64,8 +67,12 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                child: ElevatedButton(onPressed: () {}, child: Text('Enter',style: buttonTextStyle,)),
-              )
+                child: ElevatedButton(onPressed: () {
+
+                  Get.to(OtpVerificationScreen(email: _emailETController.text,));
+
+                }, child: Text('Next',style: buttonTextStyle,)),
+              ),
             ],
           ),
         ),
