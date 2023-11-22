@@ -21,8 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
     // TODO: implement initState
     super.initState();
     Future.delayed(const Duration(seconds: 1)).then((value) async{
-     // Get.to(EmailVerificationScreen());
-      Get.to(BottomNavBarScreen());
+      Get.off(const BottomNavBarScreen());
 
 
     });
@@ -54,7 +53,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 Padding(
                   padding: EdgeInsets.all(20.0),
                   child: Text(
-                    "Version 1.0.0",
+                    "Vertion 1.0.0",
                     style: TextStyle(color: greyColor,
                         letterSpacing: 0.4
                     ),

@@ -6,7 +6,6 @@ import 'package:swiftshop/ui/utils/text_style.dart';
 import '../../utils/app_colors.dart';
 import '../../widgets/text_form_field.dart';
 import '../../widgets/title_text.dart';
-import 'complete_profile.dart';
 import 'otp_verification_screen.dart';
 
 class EmailVerificationScreen extends StatefulWidget {

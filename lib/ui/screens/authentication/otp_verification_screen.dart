@@ -1,10 +1,8 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
 import '../../utils/app_colors.dart';
-import '../../utils/snakbar_message.dart';
 
 import '../../utils/text_style.dart';
 import '../../widgets/title_text.dart';
@@ -93,7 +91,7 @@ class OtpVerificationScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: ElevatedButton(onPressed: () {
 
-                    Get.to(CompleteProfileScreen());
+                    Get.to(const CompleteProfileScreen());
 
                   }, child: Text('Next',style: buttonTextStyle,)),
                 ),
@@ -106,12 +104,12 @@ class OtpVerificationScreen extends StatelessWidget {
                   height: 20,
                 ),
                 RichText(
-                  text: TextSpan(
-                    style: const TextStyle(fontSize: 13, color: greyColor),
+                  text: const TextSpan(
+                    style: TextStyle(fontSize: 13, color: greyColor),
                     text: 'This code will be expire in ',
                     children: [
                       TextSpan(
-                        style: const TextStyle(
+                        style: TextStyle(
                             color: primaryColor, fontWeight: FontWeight.w600),
                         text: '120s',
                       ),

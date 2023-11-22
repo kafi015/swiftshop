@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:swiftshop/ui/screens/spalsh_screen.dart';
+import 'package:swiftshop/ui/state_manager/bottom_nav_bar_controller.dart';
 import 'package:swiftshop/ui/utils/app_colors.dart';
 
 void main(){
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -13,12 +14,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      initialBinding: GetxBinding(),
       debugShowCheckedModeBanner: false,
-      home: SwiftShop(),
+      home: const SwiftShop(),
       theme: ThemeData(
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-              minimumSize: Size(double.infinity, 40),
+              minimumSize: const Size(double.infinity, 40),
               backgroundColor: primaryColor)
         )
       ),
@@ -31,7 +33,17 @@ class SwiftShop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SplashScreen();
+    return const SplashScreen();
   }
 }
 
+
+class GetxBinding extends Bindings {
+  @override
+  void dependencies() {
+    //  Get.create<BottomNavigationBarController>(() => BottomNavigationBarController());
+    // Get.put(() => BottomNavigationBarController());
+    Get.put(BottomNavigationBarController());
+
+  }
+}
