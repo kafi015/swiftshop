@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:swiftshop/ui/screens/authentication/email_verification_screen.dart';
 
 import '../state_manager/bottom_nav_bar_controller.dart';
 import '../utils/app_colors.dart';
@@ -51,8 +52,9 @@ class HomeScreen extends StatelessWidget {
             ),
             AppBarIcons(
               icon: Icons.logout,
-              onTap: () async {
+              onTap: () async{
                 //await Get.find<AuthController>().logOut();
+                Get.off(const EmailVerificationScreen());
               },
             ),
             const SizedBox(

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:swiftshop/ui/screens/bottom_nav_bar_screen.dart';
 import '../../utils/app_colors.dart';
 import '../../utils/text_style.dart';
 import '../../widgets/text_form_field.dart';
@@ -12,21 +14,18 @@ class CompleteProfileScreen extends StatefulWidget {
 }
 
 class _CompleteProfileScreenState extends State<CompleteProfileScreen> {
-
   final TextEditingController _firstNameETController = TextEditingController();
   final TextEditingController _lastNameETController = TextEditingController();
   final TextEditingController _mobileETController = TextEditingController();
   final TextEditingController _cityETController = TextEditingController();
-  final TextEditingController _shippingAddressETController = TextEditingController();
-
+  final TextEditingController _shippingAddressETController =
+      TextEditingController();
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -100,7 +99,14 @@ class _CompleteProfileScreenState extends State<CompleteProfileScreen> {
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  child: ElevatedButton(onPressed: () {}, child: Text('Complete',style: buttonTextStyle,)),
+                  child: ElevatedButton(
+                      onPressed: () {
+                        Get.offAll(const BottomNavBarScreen());
+                      },
+                      child: Text(
+                        'Complete',
+                        style: buttonTextStyle,
+                      )),
                 ),
                 const SizedBox(
                   height: 20,
