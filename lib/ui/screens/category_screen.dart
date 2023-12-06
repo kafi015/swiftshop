@@ -29,7 +29,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
               crossAxisCount: 4,
             ), itemBuilder: (context, index) {
          //  return const CategoryCardWidget(name: 'Dummy');
-          return const CategoryCardWidget(name: 'dummy', imageUrl: '', id: 4);
+          return const CategoryCardWidget(name: 'dummy', imageUrl: appIcon, id: 4);
         }),
       ),
     );

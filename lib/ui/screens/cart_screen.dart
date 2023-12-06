@@ -138,6 +138,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:swiftshop/ui/utils/app_colors.dart';
 
+import '../widgets/appbar_back_button.dart';
+
 class CartScreen extends StatefulWidget {
   const CartScreen({super.key});
 
@@ -150,14 +152,9 @@ class _CartScreenState extends State<CartScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: primaryColor,
+        leading: const BottomNavAppBarBackButton(),
         title: const Text('Cart'),
-        elevation: 0,
-        leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back_ios,
-            color: greyColor,
-          ), onPressed: () {},
-        ),
       ),
       body: Column(
         children: [

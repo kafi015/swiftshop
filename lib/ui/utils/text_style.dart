@@ -10,6 +10,12 @@ TextStyle titleTextStyle = const TextStyle(
   fontWeight: FontWeight.w500,
   letterSpacing: 0.5,
 );
+TextStyle drawerTitleTextStyle = const TextStyle(
+  fontSize: 24,
+  color: Colors.white,
+  fontWeight: FontWeight.w500,
+  letterSpacing: 0.5,
+);
 
 TextStyle subTitleTextStyle = const TextStyle(
   color: softGreyColor,

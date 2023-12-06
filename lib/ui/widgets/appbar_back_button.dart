@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import '../state_manager/bottom_nav_bar_controller.dart';
 import '../utils/app_colors.dart';
 
 class AppBarBackButtton extends StatelessWidget {
@@ -14,7 +16,7 @@ class AppBarBackButtton extends StatelessWidget {
       },
       icon: const Icon(
         Icons.arrow_back_ios,
-        color: greyColor,
+        color: Colors.white,
       ),
     );
   }
@@ -29,11 +31,11 @@ class BottomNavAppBarBackButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return IconButton(
       onPressed: () {
-       // Get.find<BottomNavigationBarController>().backToHome();
+        Get.find<BottomNavigationBarController>().backToHome();
       },
       icon: const Icon(
         Icons.arrow_back_ios,
-        color: greyColor,
+        color: Colors.white,
       ),
     );
   }

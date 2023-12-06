@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:swiftshop/ui/screens/authentication/email_verification_screen.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../state_manager/bottom_nav_bar_controller.dart';
 import '../utils/app_colors.dart';
@@ -8,6 +9,8 @@ import '../widgets/home/appbar_icons.dart';
 import '../widgets/home/home_remarks.dart';
 import '../widgets/home/search_textfield.dart';
 import '../widgets/product_details/category_card_widget.dart';
+import '../widgets/swiftshop_drawer.dart';
+import 'authentication/complete_profile.dart';
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -16,13 +19,24 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.white,
         elevation: 0,
 
         title: Row(
           children: [
-            Image.asset(
-              appIcon,scale: 4,
+            Builder(
+              builder: (context) {
+                return InkWell(
+                  onTap: () {
+                    Scaffold.of(context).openDrawer();
+                  },
+                 // tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+                  child: Image.asset(
+                    appIcon,scale: 4,
+                  ),
+                );
+              }
             ),
             // const Text(
             //   'ShopanBD',
@@ -33,7 +47,7 @@ class HomeScreen extends StatelessWidget {
             // ),
             const Spacer(),
             AppBarIcons(
-              icon: Icons.person, onTap: () {  },
+              icon: Icons.person, onTap: () {Get.to(const CompleteProfileScreen());  },
               // onTap: () async {
               //   await Get.find<AuthController>().isLoggedIn()
               //       ? Get.to(const CompleteProfileScreen())
@@ -45,7 +59,13 @@ class HomeScreen extends StatelessWidget {
             ),
             AppBarIcons(
               icon: Icons.call,
-              onTap: () {},
+              onTap: () async {
+                final Uri launchUri = Uri(
+                  scheme: 'TEL',
+                  path: '+8801622016786',
+                );
+                await launchUrl(launchUri);
+              },
             ),
             const SizedBox(
               width: 10,
@@ -63,6 +83,11 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
+
+
+      drawer: const SwiftShopDrawer(),
+
+
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: Padding(
@@ -463,3 +488,6 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+
+

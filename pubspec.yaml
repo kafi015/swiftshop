@@ -41,6 +41,7 @@ dependencies:
   http: ^0.13.5
   email_validator: ^2.1.17
   shared_preferences: any
+  url_launcher: ^6.1.12
 
 dev_dependencies:
   flutter_test:
