@@ -74,46 +74,46 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(
                 height: 16,
               ),
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: [
-                Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 16),
-                  height: 200,
-                  width: 360,
-                  decoration: const BoxDecoration(
-                    color: Colors.amber
-                  ),
-                ),
-                Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 16),
-                  height: 200,
-                  width: 360,
-                  decoration: const BoxDecoration(
-                    color: Colors.red
-                  ),
-                ),
-                Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 16),
-                  height: 200,
-                  width: 360,
-                  decoration: const BoxDecoration(
-                    color: Colors.purple
-                  ),
-                ),
-                Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 16),
-                  height: 200,
-                  width: 360,
-                  decoration: const BoxDecoration(
-                    color: Colors.blue
-                  ),
-                ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Container(
+                      margin: const EdgeInsets.symmetric(horizontal: 16),
+                      height: 200,
+                      width: 360,
+                      decoration: const BoxDecoration(
+                          color: Colors.amber
+                      ),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.symmetric(horizontal: 16),
+                      height: 200,
+                      width: 360,
+                      decoration: const BoxDecoration(
+                          color: Colors.red
+                      ),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.symmetric(horizontal: 16),
+                      height: 200,
+                      width: 360,
+                      decoration: const BoxDecoration(
+                          color: Colors.purple
+                      ),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.symmetric(horizontal: 16),
+                      height: 200,
+                      width: 360,
+                      decoration: const BoxDecoration(
+                          color: Colors.blue
+                      ),
+                    ),
 
-              ],
-            ),
-          ),
+                  ],
+                ),
+              ),
 
               // GetBuilder<HomeController>(builder: (homeController) {
               //   if (homeController.getSliderInProgress) {
@@ -463,4 +463,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-

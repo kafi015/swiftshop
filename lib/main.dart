@@ -42,7 +42,7 @@ class GetxBinding extends Bindings {
   @override
   void dependencies() {
     //  Get.create<BottomNavigationBarController>(() => BottomNavigationBarController());
-    // Get.put(() => BottomNavigationBarController());
+    //Get.put(() => BottomNavigationBarController());
     Get.put(BottomNavigationBarController());
 
   }
