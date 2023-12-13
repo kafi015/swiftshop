@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
+import 'package:swiftshop/ui/screens/authentication/complete_profile.dart';
+import 'package:swiftshop/ui/screens/product_details_screen.dart';
 
 import '../../utils/app_colors.dart';
-
 import '../../utils/text_style.dart';
 import '../../widgets/title_text.dart';
-import 'complete_profile.dart';
 
 
 class OtpVerificationScreen extends StatelessWidget {
@@ -91,7 +91,7 @@ class OtpVerificationScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: ElevatedButton(onPressed: () {
 
-                    Get.to(const CompleteProfileScreen());
+                  Get.to(const CompleteProfileScreen());
 
                   }, child: Text('Next',style: buttonTextStyle,)),
                 ),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:swiftshop/ui/screens/review_screen.dart';
 import '../utils/app_colors.dart';
 import '../utils/text_style.dart';
 
@@ -26,6 +28,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: primaryColor,
         title: const Text('Product Details'),
         leading: const BackButton(
           color: greyColor,
@@ -80,7 +83,9 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                                         width: 8,
                                       ),
                                       TextButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          Get.to(const ReviewScreen());
+                                        },
                                         child: const Text(
                                           'Reviews',
                                           style: TextStyle(
