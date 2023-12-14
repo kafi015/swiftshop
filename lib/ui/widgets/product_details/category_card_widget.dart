@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../screens/product_details_screen.dart';
 import '../../utils/app_colors.dart';
 
 
@@ -20,7 +21,7 @@ class CategoryCardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-       //Get.to( ProductListScreen(categoryId: id, categoryName: name,));
+       Get.to(const ProductDetailsScreen());
       },
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 6),

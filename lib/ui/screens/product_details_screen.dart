@@ -53,17 +53,19 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text('Adidas Casual Shoe s463 Brand New',
+                                  Image.asset('assets/example_photo.png'),
+                                  const SizedBox(height: 20,),
+                                  Text('Brand New HeadPhone',
                                       style: titleTextStyle.copyWith(
                                         fontSize: 18,
                                       )),
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
-                                      Wrap(
+                                      const Wrap(
                                         crossAxisAlignment:
                                         WrapCrossAlignment.center,
-                                        children: const [
+                                        children: [
                                           Icon(
                                             Icons.star,
                                             color: Colors.amber,
@@ -234,7 +236,11 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                           height: 16,
                         ),
                         const Text(
-                          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley',
+                          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley'
+                          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley'
+                          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley'
+                          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley'
+                          ,
                           style: TextStyle(
                             fontSize: 14,
                             color: softGreyColor,
@@ -262,9 +268,9 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Column(
+                  const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
+                    children: [
                       Text(
                         'Price',
                         style: TextStyle(
@@ -284,10 +290,10 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                     ],
                   ),
                   SizedBox(
-                    width: 120,
+                    width: 140,
                     child: ElevatedButton(
                         onPressed: (){},
-                        child: Text('Add to Cart')),
+                        child: const Text('Add to Cart')),
                     // child: CommonElevatedButton(
                     //   onTap: () {},
                     //   title: 'Add to Cart',

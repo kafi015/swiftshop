@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import '../utils/app_colors.dart';
 import '../utils/text_style.dart';
 import '../widgets/appbar_back_button.dart';
+import 'create_review_screen.dart';
 
 class ReviewScreen extends StatefulWidget {
   const ReviewScreen({Key? key}) : super(key: key);
@@ -75,33 +76,25 @@ class _ReviewScreenState extends State<ReviewScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Review ( 15 )',
+                        'Review(10)',
                         style: titleTextStyle.copyWith(color: softGreyColor.withOpacity(0.8)),
                       ),
                     ],
                   ),
                 ),
-                SizedBox(
-                  child: GetBuilder(
-                      builder: (cartController) {
-                        // if (cartController.addToCartInProgress)
-                        // {
-                        //   return const Center(
-                        //     child: CircularProgressIndicator(color: primaryColor,),
-                        //   );
-                        // }
-                        return ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(20.0)
-                                )
-                            ),
-                            onPressed: () async {
-                             // Get.to(const CreateReviewScreen());
-
-                            },
-                            child: const Icon(Icons.add));
-                      }
+                Padding(
+                  padding: const EdgeInsets.only(top: 8.0,bottom: 8.0),
+                  child: IconButton(
+                      style: IconButton.styleFrom(
+                        backgroundColor: primaryColor,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20.0)
+                          )
+                      ),
+                      onPressed: () {
+                        Get.to(const CreateReviewScreen());
+                      },
+                      icon: const Icon(Icons.add,size: 30,),
                   ),
                 ),
               ],
